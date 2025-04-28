@@ -1,0 +1,18 @@
+<div class="user-list">
+    <h1>User List</h1>
+<div *ngIf="users.length === 0" class="no-user">
+<p> No Users availble</p>
+console.log(Users)
+
+<ul *ngIf  = "users.length > 0" class="user-list">
+    <li *ngFor = "let user of users" class="user-item">
+        <h2>{{user.id}}</h2>
+        <p>{{user.name}}</p>
+        <p>{{user.email}}</p>
+    </li>
+
+</ul>
+
+</div>
+
+</div>
