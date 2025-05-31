@@ -12,7 +12,7 @@ import { User } from '../models/user.model'; // Import the User model
   // and we can use it directly in the template of other components.  
   imports: [CommonModule],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrls: ['./home.component.css'] // ✅ Corrected this line
 })
 export class HomeComponent implements OnInit {
   users : any[] = [];
@@ -27,5 +27,10 @@ export class HomeComponent implements OnInit {
       console.error('Error fetching users:', error);
     }
   );
+  
+  }
+   editUser(user: User) {
+    console.log('Editing user:', user);
+    // You can open a modal, navigate to a route, or show an inline form
   }
 }
